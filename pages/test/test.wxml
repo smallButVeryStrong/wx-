@@ -1,0 +1,10 @@
+<!--pages/test/test.wxml-->
+<view>
+  <text>数据绑定</text>
+  <view id='item-{{id}}'>{{message}}</view>
+  <view wx:if="{{open}}">我是测试wx:if的</view>
+  <view wx:show="{{open}}">我是测试wx:show的</view>
+  <checkbox checked='{{true}}'>我是选框</checkbox>
+
+  <view wx:for="{{[zero,1,3]}}">{{item}}</view>
+</view>

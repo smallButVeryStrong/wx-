@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<!--
+  bindtap 绑定事件处理函数
+
+-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo1"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+   
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view>
+    <view class="line-control">
+        <view bindtap="doUpload" class="item">
+            <view class="item-inner">上传图片</view>
+        </view>
+    </view>
+  </view>
+  <view>
+    <view bindtap="login">
+      <view>登录</view>
+    </view>
+  </view>
+  <view>
+    <view bindtap="common">
+      <view>公共js</view>
+    </view>
+  </view>
+</view>
